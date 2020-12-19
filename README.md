@@ -66,4 +66,6 @@ featureCounts -p -g gene_id -a GCF_000317375.1_MicOch1.0_genomic.gtf -o output_n
 ```
 We used the MultiQC tool to visualize the results of featurecounts:
 
+![](featureCounts_nivalis_glareolus.png)
 
+See the results for other comparisons in the repository
