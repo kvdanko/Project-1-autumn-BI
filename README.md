@@ -31,4 +31,25 @@ Example of command for trimming:
 ```
 java -jar Trimmomatic-0.39/trimmomatic-0.39.jar  PE -phred33 5441_S37_R1_001.fastq.gz  5441_S37_R2_001.fastq.gz C_nivalis_pairs_1-2.fastq.gz  C_nivalis_single_1-2.fastq.gz C_nivalis_pairs_2-2.fastq.gz  C_nivalis_single_2-2.fastq.gz HEADCROP:10  SLIDINGWINDOW:4:15 MINLEN:30
 ```
+New trimmed files were checked with FastQC again  (see attached materials) . As a result, we got rid of low quality nucleotides at the beginning of the reads, adapters, short reads and low quality reads.
+
+### Alignment
+We decided to align reads to the genome of well characterised species - Microtus ochrogaster, which is the closest relative to our experimental species and has the most fully assembled genome and its annotation.
+Reference genome - M.ochragaster
+- GCF_000317375.1_MicOch1.0_genomic.fna.gz (genome, fasta format)
+- GCF_000317375.1_MicOch1.0_genomic.gff.gz (genome annotation, GFF format)
+
+We mapped our reads via HISAT2 programm. In order to start the alignment, indexes of the reference genome must be built:
+```
+hisat2-build /path/to/reference_genome.fna genome_index
+```
+For species closer to the reference (C.nivalis), we used the command:
+```
+hisat2 -p 2 -x genome_index -1 <forward reads> -2  <reverse_reads>| samtools view -b > aligned.bam
+```
+For more distant (C. glareolus, L. gregalis A ,  L. raddei, A.lemminus ) we used more soft parameters , as the overall alignment with standard parameters rate was low:
+```
+hisat2 --mp 2,1 --sp 1,1 -p 2  -x genome_index -1 <forward reads> -2  <reverse_reads>| samtools view -b > aligned.bam
+```
+Results of alignment:
 
