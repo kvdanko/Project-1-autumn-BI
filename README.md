@@ -52,4 +52,4 @@ For more distant (C. glareolus, L. gregalis A ,  L. raddei, A.lemminus ) we used
 hisat2 --mp 2,1 --sp 1,1 -p 2  -x genome_index -1 <forward reads> -2  <reverse_reads>| samtools view -b > aligned.bam
 ```
 Results of alignment:
-
+![](aligment_percent.jpg)
