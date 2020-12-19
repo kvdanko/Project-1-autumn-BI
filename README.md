@@ -106,6 +106,7 @@ countdata <- as.matrix(countdata)
 ```
 
 **2. Condition assignment.**
+
 DESeq needs a condition, which includes "control" and "experiment". You may assign whichever sample type as control (e.x. we assigned `Species_A` as control), and the rest one as experiment (e.x. we assigned `Species_B` as experiment). So that DESeq2 compares gene expression of "experiment vs control" model.
 In the present dataset we had 2 biological replicates of `Species_A` and `Species_B` , so that we created the following condition:
 ```
@@ -115,6 +116,7 @@ dds <- DESeqDataSetFromMatrix(countData = countdata, colData = coldata, design =
 ```
 
 **3. Running DESeq2.**
+
 The following commands generate new dataset
 ```
 # Run DESeq2
@@ -124,6 +126,7 @@ res <- results(dds)
 head(res)
 ```
 **4. Volcano plot.**
+
 Now it is time to visualization. One of the best way to visualize differential gene expression is Volcano plot.
 ```
 EnhancedVolcano(res,
@@ -148,6 +151,7 @@ write.table(sorted.df, file="results.txt", sep="\t", col.names=NA, quote=FALSE)
 
 
 **5. Data normalization and heatmap plot.**
+
 Another way to visualize differential gene expression is a heatmap. 
 Firstly, data must be normalized.
 
@@ -189,9 +193,11 @@ invisible(dev.off())
 
 
 ### GO analysis
+
 GO analysis allows to group differentially expressed genes by their molecular function, biological process or cellular component.
 
 **1. Annotation downloading.**
+
 Firstly, reference genome annotation must be downloaded from http://bioconductor.org/packages/release/BiocViews.html#___OrgDb .
 
 We investigated the differential gene expression in voles, so we have decided to choose Rat annotation as it is the closest relative to vole among all organisms presented in abovementioned database.
@@ -201,6 +207,7 @@ BiocManager::install(organism, character.only = TRUE)
 library(organism, character.only = TRUE)
 ```
 **2. Gene key type checking.**
+
 On the next step gene key type must be checked. It is very important step as clusterProfiler cannot recognize gene key type automatically. Therefore right gene key type must be denoted manually.
 Here is an example of gene key type conversion from SYMBOL to ENSEMBL.
 ```
