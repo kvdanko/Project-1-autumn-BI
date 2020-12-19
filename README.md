@@ -22,5 +22,5 @@ To carry out a comparative analysis of the differential expression of the vole r
 ### Data
 For all species, except for *C.glareolus*, tissues of the following organs were sequenced: muscle, heart, lungs, testes, and brain. *C. glareolus* tissues were not sequenced by us, but taken from the NCBI database. Paired reads of the heart, liver and spleen were found for this species.
 
-
+![](Personal_comparison.jpg)
 
