@@ -54,3 +54,16 @@ hisat2 --mp 2,1 --sp 1,1 -p 2  -x genome_index -1 <forward reads> -2  <reverse_r
 Results of alignment:
 
 ![](aligment_percent.jpg)
+
+### Quantifying with featureCounts
+FeatureCounts only accepts gtf as input, but gff cannot. Therefore, first we convert the gff file to gtf using gffread.
+```
+gffread GCF_000317375.1_MicOch1.0_genomic.gff -T -o GCF_000317375.1_MicOch1.0_genomic.gtf
+```
+Command for featureCounts:
+```
+featureCounts -p -g gene_id -a GCF_000317375.1_MicOch1.0_genomic.gtf -o output_name.featureCounts.txt *.bam
+```
+We used the MultiQC tool to visualize the results of featurecounts:
+
+
