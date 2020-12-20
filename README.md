@@ -35,6 +35,7 @@ For all species, except for *C.glareolus*, tissues of the following organs were 
 
 For the analysis, 2-3 individuals of each species were taken
 
+![](number_of_species.jpg)
 
 
 ### Quality control
