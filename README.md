@@ -15,7 +15,7 @@ To carry out a comparative analysis of the differential expression of the vole r
 
 **Tasks**
 1. Estimate the quality of raw reads
-2. Align reads on the reference genome of Microtus ochrogaster
+2. Align reads on the reference genome of *Microtus ochrogaster*
 3. Find differentially expressed genes
 4. Carry out the gene ontology analysis
 
@@ -34,7 +34,7 @@ java -jar Trimmomatic-0.39/trimmomatic-0.39.jar  PE -phred33 5441_S37_R1_001.fas
 New trimmed files were checked with FastQC again  (see attached materials) . As a result, we got rid of low quality nucleotides at the beginning of the reads, adapters, short reads and low quality reads.
 
 ### Alignment
-We decided to align reads to the genome of well characterised species - Microtus ochrogaster, which is the closest relative to our experimental species and has the most fully assembled genome and its annotation.
+We decided to align reads to the genome of well characterised species - *Microtus ochrogaster*, which is the closest relative to our experimental species and has the most fully assembled genome and its annotation.
 Reference genome - M.ochragaster
 - GCF_000317375.1_MicOch1.0_genomic.fna.gz (genome, fasta format)
 - GCF_000317375.1_MicOch1.0_genomic.gff.gz (genome annotation, GFF format)
@@ -47,7 +47,7 @@ For species closer to the reference (C.nivalis), we used the command:
 ```
 hisat2 -p 2 -x genome_index -1 <forward reads> -2  <reverse_reads>| samtools view -b > aligned.bam
 ```
-For more distant (C. glareolus, L. gregalis A ,  L. raddei, A.lemminus ) we used more soft parameters , as the overall alignment with standard parameters rate was low:
+For more distant (*C. glareolus*, *L. gregalis A* ,  *L. raddei*, *A.lemminus* ) we used more soft parameters , as the overall alignment with standard parameters rate was low:
 ```
 hisat2 --mp 2,1 --sp 1,1 -p 2  -x genome_index -1 <forward reads> -2  <reverse_reads>| samtools view -b > aligned.bam
 ```
