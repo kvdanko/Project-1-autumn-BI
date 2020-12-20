@@ -256,7 +256,8 @@ dotplot(gse, showCategory=10, split=".sign") + facet_grid(.~.sign)
 ```
 ![Example GO analysis plot](GO_analysis_lemminus-nivalis.jpg)
 
-##Conclusions
+### Conclusions
+
 It seems that in cryptic species there are no significant differences in gene expression. In *L. raddei* genes connected with immune processes are upregulated in comparison with *L. gregalis*. However, In L.gregalis genes involved in Red/Ox process are upregulated.
 
 
