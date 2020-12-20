@@ -1,10 +1,19 @@
 # Project-1-semester-IB
+## Analysis of differential expression of cryptic vole species and voles from various habitats
 Authors: 
 
 - Danko Katerina 
 - Anton Sidorin
 - Sogomonyan Karina
 - Ilyutkin Stanislav
+
+Supervisors:
+- Bondareva Olga  
+- Petrova Tatyana 
+- Bodrov Semyon
+
+Organisations: Zoological Institute RAS,  Bioinformatics Institute
+
 
 ### Introduction 
 Habitat adaptation is one of the key factors in evolutionary success and species radiation. Voles inhabit different biotopes worldwide. Close relatives with a little differences in genome live in forests and in rocky mountains. Moreover cryptic species live in the same еcological niches, but differ genetically. Vole adaptation to different habitats occurs due to changes in gene expression. However, the differentially expressed genes were still not fully understood for voles from different habitats and cryptic species from the same habitat. 
