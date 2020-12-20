@@ -243,7 +243,7 @@ keytypes(org.Rn.eg.db)
 **4. Running GO**
 ```
 gse <- gseGO(geneList=gene_list, 
-             ont ="BP", 
+             ont ="ALL", 
              keyType = "ENSEMBL", 
              nPerm = 10000, 
              minGSSize = 3, 
