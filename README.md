@@ -255,3 +255,13 @@ gse <- gseGO(geneList=gene_list,
 dotplot(gse, showCategory=10, split=".sign") + facet_grid(.~.sign)
 ```
 ![Example GO analysis plot](GO_analysis_lemminus-nivalis.jpg)
+
+##Conclusions
+It seems that in cryptic species there are no significant differences in gene expression. In *L. raddei* genes connected with immune processes are upregulated in comparison with *L. gregalis*. However, In L.gregalis genes involved in Red/Ox process are upregulated.
+
+
+*C. glareolus* (forest) demonstrates increased expression level of genes involved in lipids metabolism, fibrinolysis and Red/Ox comparing with *C. nivalis* (mountains, forest landscape).
+
+Genes involved in Red/Ox processes have higher expression in *A. lemminus* (mountains, rocky landscape) comparing with *C. glareolus*.
+
+Genes associated with Red/Ox processes and muscle formation increased in *A. lemminus* in comparison to *C. nivallis*.
