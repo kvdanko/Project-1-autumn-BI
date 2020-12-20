@@ -138,6 +138,8 @@ EnhancedVolcano(res,
 ```
 ![Example volcano plot](volcano)
 
+Volcano plots for other species you may find in the "DESeq2" folder.
+
 Results may be sorted and saved.
 ```
 # Sort the results data frame by the padj and foldChange columns.
@@ -191,6 +193,7 @@ invisible(dev.off())
 ```
 ![Example heatmap](heatmap_nivalis_lemminus.jpg)
 
+Other heatmaps you may find in the "DESeq2" folder.
 
 ### GO analysis
 
@@ -255,6 +258,8 @@ gse <- gseGO(geneList=gene_list,
 dotplot(gse, showCategory=10, split=".sign") + facet_grid(.~.sign)
 ```
 ![Example GO analysis plot](GO_analysis_lemminus-nivalis.jpg)
+
+Other GO analysis plots are in the "GO_analysis" folder.
 
 ### Conclusions
 
