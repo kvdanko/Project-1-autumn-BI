@@ -189,7 +189,7 @@ colors <- colorRampPalette(c("green", "black", "red"),space = "rgb")(256)
 heatmap.2(mat, col = pal, density.info = "none",trace = "none", margins = c(14,14), lhei = c(1,5))
 invisible(dev.off())
 ```
-![Example heatmap](heatmap_nivalis-lemminus.jpg)
+![Example heatmap](heatmap_nivalis_lemminus.jpg)
 
 
 ### GO analysis
